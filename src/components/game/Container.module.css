@@ -1,0 +1,7 @@
+.container {
+  margin: 1em 0;
+
+  @media (--breakpoint-xl) {
+    margin: 2em 0;
+  }
+}

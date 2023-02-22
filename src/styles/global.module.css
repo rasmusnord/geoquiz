@@ -1,0 +1,65 @@
+@import url("https://use.typekit.net/lcd2fxa.css");
+
+:root {
+  --primary: hsl(224, 35%, 28%);
+  --primary-dark: hsl(224, 35%, 25%);
+  --secondary: hsl(213, 57%, 95%);
+  --action: hsl(213, 57%, 84%);
+  --action-hover: hsl(213, 57%, 90%);
+  --action-correct: hsl(131, 31%, 46%);
+  --action-incorrect: hsl(14, 60%, 50%);
+  --radius: 0.25rem;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  background: var(--primary);
+  color: var(--secondary);
+  user-select: none;
+}
+
+html {
+  font-size: 90%;
+
+  @media (--breakpoint-md) {
+    font-size: 115%;
+  }
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+  padding: 2em;
+
+  @media (--breakpoint-sm) {
+    padding: 4em;
+  }
+}
+
+body {
+  font-family: "proxima-nova", system-ui;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: 700;
+
+  &:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,54 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+  line-height: 1;
+
+  @media (--breakpoint-xl) {
+    padding: 0 2em;
+    margin: 2em 0;
+  }
+}
+
+.logo {
+  font-size: 6em;
+  transition: font-size 0.3s ease-in-out;
+
+  .showControls & {
+    font-size: 4em;
+  }
+
+  > * {
+    height: 1em;
+  }
+}
+
+.controls {
+  font-size: 2em;
+  min-width: 1em;
+  opacity: 0;
+  transform: translatey(-500%);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+
+  .showControls & {
+    transform: translatey(0%);
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
