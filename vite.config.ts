@@ -6,7 +6,11 @@ export default defineConfig({
   plugins: [
     react(),
     VitePluginFaviconsInject("src/assets/icon.svg", {
-      display: "browser",
+      display: "standalone",
+      appleStatusBarStyle: "black",
+      background: "#2e3c60",
+      theme_color: "#2e3c60",
+      orientation: "portrait",
     }),
   ],
 });
